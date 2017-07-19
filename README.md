@@ -49,10 +49,15 @@
     
 我们可以在本地博客文件夹source->_post文件夹下看到我们新建的markdown文件。
 保存后，我们进行本地发布：
-                $ hexo server
+
+        $ hexo server
+        
 本地预览
-                http://localhost:4000/
-发布
-                $ hexo generate
-                $ hexo deploy
+
+        http://localhost:4000/
+        
+发布     
+
+        $ hexo generate
+        $ hexo deploy
 
