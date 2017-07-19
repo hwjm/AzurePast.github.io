@@ -8,18 +8,18 @@
 #### 安装hexo
 * 下载安装hexo
 
-    $ npm install -g hexo-cli
+        $ npm install -g hexo-cli
     
 * 初始化博客
 
-    // 建立一个博客文件夹，名为<folder_name> (名字可以随便起)
-    $ cd <folder_name>
-    // 初始化
-    $ hexo init
-    // node.js的命令，根据博客既定的dependencies配置安装所有的依赖包
-    $ npm install
-    // 安装部署相关的配置
-    npm install hexo-deployer-git
+        // 建立一个博客文件夹，名为<folder_name> (名字可以随便起)
+        $ cd <folder_name>
+         // 初始化
+        $ hexo init
+        // node.js的命令，根据博客既定的dependencies配置安装所有的依赖包
+        $ npm install
+        // 安装部署相关的配置
+        npm install hexo-deployer-git
     
 * 配置博客
 
@@ -49,10 +49,10 @@
     
 我们可以在本地博客文件夹source->_post文件夹下看到我们新建的markdown文件。
 保存后，我们进行本地发布：
-    $ hexo server
+        $ hexo server
 本地预览
-    http://localhost:4000/
+        http://localhost:4000/
 发布
-    $ hexo generate
-    $ hexo deploy
+        $ hexo generate
+        $ hexo deploy
 
