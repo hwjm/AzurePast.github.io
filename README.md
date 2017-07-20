@@ -67,8 +67,10 @@
 
 * hexo工程代码上传
 
-    前往github创建新的分支, 并设置该分支为默认分支  
+    前往github创建新的分支, 并设置该分支为默认分支 
+    <center>
     ![Github上新建分支](http://upload-images.jianshu.io/upload_images/291600-fd8d2be4578c9aa4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+    </center>
     
     在本地博客根目录下使用git指令上传项目到Github
 
