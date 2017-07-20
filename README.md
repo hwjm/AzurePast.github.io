@@ -26,12 +26,12 @@
     前往<folder_name>文件夹, 打开_config.yml文件, 修改如下配置信息
 
          // 修改网站相关信息
-         title: inerdstack
-         subtitle: the stack of it nerds
-          description: start from zero
-          author: inerdstack
-          language: zh-CN
-          timezone: Asia/Shanghai
+         title: <your_title>
+         subtitle: <your_subtitle>
+         description: <your_description>
+         author: <author>
+         language: zh-CN
+         timezone: Asia/Shanghai
     
          //配置统一资源定位符（个人域名）
          url: https://azurepast.github.io/
@@ -39,8 +39,8 @@
          //配置部署
           deploy:
            type: git
-            repo: https://github.com/iNerdStack/inerdstack.github.io.git
-            branch: master
+           repo: https://github.com/AzurePpast/azurepast.github.io.git
+           branch: master
       
 #### 发表博客文章
 
