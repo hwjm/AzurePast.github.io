@@ -49,7 +49,7 @@
         // 新建一篇文章
         hexo new "文章标题"
     
-    我们可以在本地博客文件夹source->_post文件夹下看到我们新建的markdown文件。
+    我们可以在本地博客文件夹source->_post文件夹下看到我们新建的markdown文件。
         
 * 本地发布预览
 
@@ -71,7 +71,7 @@
     
     ![Github上新建分支](http://upload-images.jianshu.io/upload_images/291600-fd8d2be4578c9aa4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
     
-    在本地博客根目录下使用git指令上传项目到Github
+    在本地博客根目录下使用git指令上传项目到Github
 
         // git初始化
         git init
