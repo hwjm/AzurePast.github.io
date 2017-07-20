@@ -49,17 +49,15 @@
          // 新建一篇文章
           hexo new "文章标题"
     
-    我们可以在本地博客文件夹source->_post文件夹下看到我们新建的markdown文件。
+    我们可以在本地博客文件夹source->_post文件夹下看到我们新建的markdown文件。
         
 * 本地发布预览
 
     保存后，我们进行本地发布：
 
         $ hexo server
-
-        //预览地址 http://localhost:4000/
+        //本地预览地址 http://localhost:4000/
  
-        
 * 发布     
 
         $ hexo generate
