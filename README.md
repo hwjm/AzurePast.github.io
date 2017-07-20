@@ -36,8 +36,8 @@
         //配置统一资源定位符（个人域名）
         url: https://azurepast.github.io/
     
-         //配置部署
-          deploy:
+        //配置部署
+        deploy:
            type: git
            repo: https://github.com/AzurePpast/azurepast.github.io.git
            branch: master
