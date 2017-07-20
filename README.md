@@ -25,16 +25,16 @@
 
     前往<folder_name>文件夹, 打开_config.yml文件, 修改如下配置信息
 
-         // 修改网站相关信息
-         title: <your_title>
-         subtitle: <your_subtitle>
-         description: <your_description>
-         author: <author>
-         language: zh-CN
-         timezone: Asia/Shanghai
+        // 修改网站相关信息
+        title: <your_title>
+        subtitle: <your_subtitle>
+        description: <your_description>
+        author: <author>
+        language: zh-CN
+        timezone: Asia/Shanghai
     
-         //配置统一资源定位符（个人域名）
-         url: https://azurepast.github.io/
+        //配置统一资源定位符（个人域名）
+        url: https://azurepast.github.io/
     
          //配置部署
           deploy:
