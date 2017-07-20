@@ -69,28 +69,28 @@
 
     前往github创建新的分支, 并设置该分支为默认分支
     
-    ![Github上新建分支](http://upload-images.jianshu.io/upload_images/291600-fd8d2be4578c9aa4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    ![Github上新建分支](http://upload-images.jianshu.io/upload_images/291600-fd8d2be4578c9aa4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
     
     在本地博客根目录下使用git指令上传项目到Github
 
-        // git初始化
-        git init
-        // 添加仓库地址
-        git remote add origin https://github.com/用户名/仓库名.git
-        // 新建分支并切换到新建分支(hexo为分支名)
-        git checkout -b hexo
-        // 添加所有本地文件到git
-        git add .
+        // git初始化
+        git init
+        // 添加仓库地址
+        git remote add origin https://github.com/用户名/仓库名.git
+        // 新建分支并切换到新建分支(hexo为分支名)
+        git checkout -b hexo
+        // 添加所有本地文件到git
+        git add .
         git commit -m "<your_description>"
-        // 推送到hexo分支
+        // 推送到hexo分支
         git push origin hexo
         
 * 其它设备同步
     
     在其它设备上clone下Github上hexo分支下的hexo工程到本地, 就可以写文章了
     
-        // 克隆文件到本地
-        git clone -b hexo https://github.com/用户名/仓库名.git
+        // 克隆文件到本地
+        git clone -b hexo https://github.com/用户名/仓库名.git
         
     文章写好后, 重新部署到Github
     
@@ -118,5 +118,5 @@
 
 #### 参考
 
-    [20分钟教你使用hexo搭建github博客](http://www.jianshu.com/p/e99ed60390a8)
-    [多设备同步hexo搭建的Github博客](http://www.jianshu.com/p/6fb0b287f950)
+   [20分钟教你使用hexo搭建github博客](http://www.jianshu.com/p/e99ed60390a8)
+   [多设备同步hexo搭建的Github博客](http://www.jianshu.com/p/6fb0b287f950)
