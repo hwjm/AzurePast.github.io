@@ -102,7 +102,7 @@
         // 安装部署相关配置
         npm install hexo-deployer-git
         
-    同步项目源文件到Github
+  同步项目源文件到Github
 
         // 添加源文件
         git add .
@@ -118,5 +118,6 @@
 
 #### 参考
 
-   [20分钟教你使用hexo搭建github博客](http://www.jianshu.com/p/e99ed60390a8)
-   [多设备同步hexo搭建的Github博客](http://www.jianshu.com/p/6fb0b287f950)
+  [20分钟教你使用hexo搭建github博客](http://www.jianshu.com/p/e99ed60390a8)
+   
+  [多设备同步hexo搭建的Github博客](http://www.jianshu.com/p/6fb0b287f950)
