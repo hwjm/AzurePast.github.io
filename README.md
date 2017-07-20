@@ -23,40 +23,44 @@
     
 * 配置博客
 
-前往<folder_name>文件夹, 打开_config.yml文件, 修改如下配置信息
+    前往<folder_name>文件夹, 打开_config.yml文件, 修改如下配置信息
 
-    // 修改网站相关信息
-    title: inerdstack
-    subtitle: the stack of it nerds
-    description: start from zero
-    author: inerdstack
-    language: zh-CN
-    timezone: Asia/Shanghai
+         // 修改网站相关信息
+         title: inerdstack
+         subtitle: the stack of it nerds
+          description: start from zero
+          author: inerdstack
+          language: zh-CN
+          timezone: Asia/Shanghai
     
-    //配置统一资源定位符（个人域名）
-    url: https://azurepast.github.io/
+         //配置统一资源定位符（个人域名）
+         url: https://azurepast.github.io/
     
-    //配置部署
-    deploy:
-      type: git
-      repo: https://github.com/iNerdStack/inerdstack.github.io.git
-      branch: master
+         //配置部署
+          deploy:
+           type: git
+            repo: https://github.com/iNerdStack/inerdstack.github.io.git
+            branch: master
       
 #### 发表博客文章
 
-    // 新建一篇文章
-    hexo new "文章标题"
+* 新建一篇文章
+
+         // 新建一篇文章
+          hexo new "文章标题"
     
-我们可以在本地博客文件夹source->_post文件夹下看到我们新建的markdown文件。
-保存后，我们进行本地发布：
+    我们可以在本地博客文件夹source->_post文件夹下看到我们新建的markdown文件。
+        
+* 本地发布预览
+
+    保存后，我们进行本地发布：
 
         $ hexo server
-        
-本地预览
 
-        http://localhost:4000/
+        //预览地址 http://localhost:4000/
+ 
         
-发布     
+* 发布     
 
         $ hexo generate
         $ hexo deploy
