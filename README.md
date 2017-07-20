@@ -87,12 +87,12 @@
         
 * 其它设备同步
     
-    在其它设备上clone下Github上hexo分支下的hexo工程到本地, 就可以写文章了
+  在其它设备上clone下Github上hexo分支下的hexo工程到本地, 就可以写文章了
     
         // 克隆文件到本地
         git clone -b hexo https://github.com/用户名/仓库名.git
         
-    文章写好后, 重新部署到Github
+  文章写好后, 重新部署到Github
     
         // 安装hexo
         npm install hexo
