@@ -24,9 +24,9 @@
 </span>
 
 
-<div class="theme-info">
-  <div class="powered-by"></div>
-  <i class="fa fa-eyedropper" aria-hidden="true"></i>
-  <span class="post-count">博客全站共{{ totalcount(site) }}字</span>
-</div>
+<!-- <div class="theme-info"> -->
+<!--  <div class="powered-by"></div> -->
+<!--  <i class="fa fa-eyedropper" aria-hidden="true"></i> -->
+<!--  <span class="post-count">博客全站共{{ totalcount(site) }}字</span> -->
+<!-- </div> -->
 {% endif %}

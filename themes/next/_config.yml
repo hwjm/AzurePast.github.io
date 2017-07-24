@@ -195,7 +195,7 @@ post_meta:
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
-  wordcount: false
+  wordcount: true
   min2read: false
   separated_meta: true
 
@@ -303,14 +303,14 @@ han: false
 #duoshuo_shortname:
 
 # Disqus
-# disqus:
-#   enable: true
-#   shortname:
-#   count: true
-disqus_shortname: your-disqus-shortname
+disqus:
+  enable: true
+  shortname: azurepast
+  count: true
+# disqus_shortname: your-disqus-shortname
 
 # Hypercomments
-#hypercomments_id:
+hypercomments_id: 93642
 
 # changyan
 changyan:
