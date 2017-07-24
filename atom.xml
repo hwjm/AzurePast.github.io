@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>AzurePast</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://azurepast.github.io/"/>
+  <updated>2017-07-24T09:05:43.000Z</updated>
+  <id>https://azurepast.github.io/</id>
+  
+  <author>
+    <name>azurepast</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用hexo搭建Github博客</title>
+    <link href="https://azurepast.github.io/2017/07/24/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAGithub%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://azurepast.github.io/2017/07/24/使用hexo搭建Github博客/</id>
+    <published>2017-07-24T06:26:26.000Z</published>
+    <updated>2017-07-24T09:05:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Mac上使用 <a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo</a> 搭建github博客的详细步骤, 也是本博客搭建的主要步骤, 其中还包含了博客多端同步的处理方法.<br><a id="more"></a></p>
+<h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><ul>
+<li>注册github账户, 并创建仓库.<center><img src="/uploads/bolgstep1.png" alt=""></center><br><center><img src="/uploads/bolgstep2.png" alt=""></center>
+
+</li>
+</ul>
+<h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h4><ul>
+<li>参考<a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">20分钟教你使用hexo搭建github博客</a><h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4></li>
+<li>参考<a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">20分钟教你使用hexo搭建github博客</a><h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4></li>
+<li><p>下载安装hexo</p>
+<pre><code>$ npm install -g hexo-cli
+</code></pre></li>
+<li><p>初始化博客</p>
+<pre><code>// 建立一个博客文件夹，名为&lt;folder_name&gt; (名字可以随便起)
+$ cd &lt;folder_name&gt;
+ // 初始化
+$ hexo init
+// node.js的命令，根据博客既定的dependencies配置安装所有的依赖包
+$ npm install
+// 安装部署相关的配置
+npm install hexo-deployer-git
+</code></pre></li>
+<li><p>配置博客</p>
+<p>  前往<folder_name>文件夹, 打开_config.yml文件, 修改如下配置信息</folder_name></p>
+<pre><code>// 修改网站相关信息
+title: &lt;your_title&gt;
+subtitle: &lt;your_subtitle&gt;
+description: &lt;your_description&gt;
+author: &lt;author&gt;
+language: zh-CN
+timezone: Asia/Shanghai
+
+// 配置统一资源定位符（个人域名）
+url: &lt;your_url&gt;
+
+// 配置部署
+deploy:
+   type: git
+   repo: https://github.com/用户名/仓库名.git
+   branch: master
+</code></pre></li>
+</ul>
+<h4 id="发表博客文章"><a href="#发表博客文章" class="headerlink" title="发表博客文章"></a>发表博客文章</h4><ul>
+<li><p>新建一篇文章</p>
+<pre><code>// 新建一篇文章
+hexo new &quot;文章标题&quot;
+</code></pre><p>  我们可以在本地博客文件夹source -&gt; _post文件夹下看到我们新建的markdown文件。</p>
+</li>
+<li><p>本地发布预览</p>
+<p>  保存后，我们进行本地发布：</p>
+<pre><code>$ hexo server
+// 本地预览地址 http://localhost:4000/
+</code></pre></li>
+<li><p>发布     </p>
+<pre><code>$ hexo generate
+$ hexo deploy
+</code></pre></li>
+</ul>
+<h4 id="多端同步"><a href="#多端同步" class="headerlink" title="多端同步"></a>多端同步</h4><ul>
+<li><p>hexo工程代码上传</p>
+<p>  前往github创建新的分支, 并设置该分支为默认分支</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/291600-fd8d2be4578c9aa4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Github上新建分支">  </p>
+<p>  在本地博客根目录下使用git指令上传项目到Github</p>
+<pre><code>// git初始化
+git init
+// 添加仓库地址
+git remote add origin https://github.com/用户名/仓库名.git
+// 新建分支并切换到新建分支(hexo为分支名)
+git checkout -b hexo
+// 添加所有本地文件到git
+git add .
+git commit -m &quot;&lt;your_description&gt;&quot;
+// 推送到hexo分支
+git push origin hexo
+</code></pre></li>
+<li><p>其它设备同步</p>
+<p>在其它设备上clone下Github上hexo分支下的hexo工程到本地, 就可以写文章了</p>
+<pre><code>// 克隆文件到本地
+git clone -b hexo https://github.com/用户名/仓库名.git
+</code></pre><p>文章写好后, 重新部署到Github</p>
+<pre><code>// 安装hexo
+npm install hexo
+// 注意这里不需要hexo初始化：hexo init；否则之前的hexo配置参数会重置
+// 安装依赖库
+npm install
+// 安装部署相关配置
+npm install hexo-deployer-git
+</code></pre><p>同步项目源文件到Github</p>
+<pre><code>// 添加源文件
+git add .
+// git提交
+git commit -m &quot;&quot;
+// 先拉原来Github分支上的源文件到本地，进行合并
+git pull origin 分支名
+// 比较解决前后版本冲突后，push源文件到Github的分支
+git push origin 分支名
+至此多设备同步到此为止。
+</code></pre></li>
+<li><p>打完收工</p>
+</li>
+</ul>
+<h4 id="本博客使用主题链接"><a href="#本博客使用主题链接" class="headerlink" title="本博客使用主题链接"></a>本博客使用主题链接</h4><ul>
+<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo官方网站</a></li>
+<li><a href="http://www.fontawesome.com.cn/" target="_blank" rel="external">Font Awesome 中文网</a></li>
+<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT主题使用文档</a></li>
+<li><a href="https://segmentfault.com/a/1190000009544924" target="_blank" rel="external">hexo的next主题个性化配置教程</a></li>
+</ul>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><ul>
+<li><a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">20分钟教你使用hexo搭建github博客</a></li>
+<li><a href="http://www.jianshu.com/p/6fb0b287f950" target="_blank" rel="external">多设备同步hexo搭建的Github博客</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Mac上使用 &lt;a href=&quot;https://hexo.io/zh-cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo&lt;/a&gt; 搭建github博客的详细步骤, 也是本博客搭建的主要步骤, 其中还包含了博客多端同步的处理方法.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="https://azurepast.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="blog" scheme="https://azurepast.github.io/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记:Markdown</title>
+    <link href="https://azurepast.github.io/2017/07/21/%E7%AC%94%E8%AE%B0-Markdown/"/>
+    <id>https://azurepast.github.io/2017/07/21/笔记-Markdown/</id>
+    <published>2017-07-21T10:00:43.000Z</published>
+    <updated>2017-07-24T06:28:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>参考链接:<br><a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown入门指南</a>,  <a href="https://www.zybuluo.com/mdeditor?url=https%3A%2F%2Fwww.zybuluo.com%2Fstatic%2Feditor%2Fmd-help.markdown#12" target="_blank" rel="external">Cmd Markdown 简明语法手册</a></p>
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><blockquote>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="# 一级标题"></a># 一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="## 二级标题"></a>## 二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="### 三级标题"></a>### 三级标题</h3><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="###### 六级标题"></a>###### 六级标题</h6></blockquote>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><blockquote>
+<p>######无序列表</p>
+<ul>
+<li>第一种写法: * 内容</li>
+</ul>
+<ul>
+<li>第二种写法: + 内容</li>
+</ul>
+<ul>
+<li>第三种写法: - 内容</li>
+</ul>
+<p>######有序列表</p>
+<ol>
+<li>写法: 1. 内容</li>
+<li>写法: 2. 内容</li>
+</ol>
+</blockquote>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><blockquote>
+<p>> 这是一条引用</p>
+<blockquote>
+<p>>&gt; 这是一条内联引用</p>
+</blockquote>
+</blockquote>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p>插入链接与插入图片的语法很像，区别在一个 !号</p>
+<p>图片为：<code>![](){ImgCap}{/ImgCap}</code><br>链接为：<code>[百度](https://www.baidu.com/)</code></p>
+<h1 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h1><p>使用*或者_都可以达到强调的目的</p>
+<blockquote>
+<p><em>\</em>这是斜体* <em><br>**\</em>*这是粗体**<strong><br>*</strong>***这是斜体+粗体***<em>*</em></p>
+</blockquote>
+<h1 id="代码框"><a href="#代码框" class="headerlink" title="代码框"></a>代码框</h1><p>第一种写法:  <code>\</code>Hello world` `<br>第二种写法: 使用四个tab缩进        </p>
+<pre><code>Hello world
+</code></pre><h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>这是分割线 ***</p>
+<hr>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><pre><code>| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+</code></pre><table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<h1 id="免费编译器"><a href="#免费编译器" class="headerlink" title="免费编译器"></a>免费编译器</h1><ul>
+<li><a href="http://mouapp.com/" target="_blank" rel="external">Mou</a></li>
+</ul>
+<p align="right">时间:  2017年07月14日</p>
+]]></content>
+    
+    <summary type="html">
+    
+      markdown学习笔记, 关于markdown的入门级使用方法
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="https://azurepast.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Markdown" scheme="https://azurepast.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://azurepast.github.io/2017/07/19/hello-world/"/>
+    <id>https://azurepast.github.io/2017/07/19/hello-world/</id>
+    <published>2017-07-19T09:16:51.000Z</published>
+    <updated>2017-07-24T06:13:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
