@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[笔记:Markdown]]></title>
+    <url>%2F2017%2F07%2F21%2F%E7%AC%94%E8%AE%B0-Markdown%2F</url>
+    <content type="text"><![CDATA[参考链接:Markdown入门指南Cmd Markdown 简明语法手册 标题 # 一级标题## 二级标题### 三级标题###### 六级标题 列表 ######无序列表 第一种写法: * 内容 第二种写法: + 内容 第三种写法: - 内容 ######有序列表 写法: 1. 内容 写法: 2. 内容 引用 > 这是一条引用 >&gt; 这是一条内联引用 链接插入链接与插入图片的语法很像，区别在一个 !号 图片为：![](){ImgCap}{/ImgCap}链接为：[百度](https://www.baidu.com/) 强调使用*或者_都可以达到强调的目的 \这是斜体* **\*这是粗体******这是斜体+粗体**** 代码框第一种写法: \Hello world` `第二种写法: 使用四个tab缩进 Hello world 分割线这是分割线 *** 表格| Tables | Are | Cool | | ------------- |:-------------:| -----:| | col 3 is | right-aligned | $1600 | | col 2 is | centered | $12 | | zebra stripes | are neat | $1 | Tables Are Cool col 3 is right-aligned $1600 col 2 is centered $12 zebra stripes are neat $1 免费编译器 Mou 时间: 2017年07月14日]]></content>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F07%2F19%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
