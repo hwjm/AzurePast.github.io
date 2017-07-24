@@ -2,14 +2,20 @@
 title: '笔记:Markdown'
 date: 2017-07-21 18:00:43
 tags: Markdown
+categories: 博客搭建
+description: markdown学习笔记, 关于markdown的入门级使用方法
 ---
-参考链接: [Markdown入门指南](http://www.jianshu.com/p/1e402922ee32/)
+参考链接:
+[Markdown入门指南](http://www.jianshu.com/p/1e402922ee32/),  [Cmd Markdown 简明语法手册](https://www.zybuluo.com/mdeditor?url=https%3A%2F%2Fwww.zybuluo.com%2Fstatic%2Feditor%2Fmd-help.markdown#12)
+
+
 标题
 ===
-> # \# 一级标题
-> ## \## 二级标题
-> ### \### 三级标题
-> ###### \###### 六级标题
+
+  > # \# 一级标题
+  > ## \## 二级标题
+  > ### \### 三级标题
+  > ###### \###### 六级标题
 
 列表
 ===
