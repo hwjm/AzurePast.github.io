@@ -304,8 +304,8 @@ han: false
 
 # Disqus
 disqus:
-  enable: true
-  shortname: azurepast
+  enable: false
+  shortname: 
   count: true
 # disqus_shortname: your-disqus-shortname
 
